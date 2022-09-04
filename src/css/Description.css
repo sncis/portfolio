@@ -1,0 +1,36 @@
+.intro-section{
+position: relative;
+height: 80vh;
+width: 100vw;
+}
+
+.intro-container{
+  position:absolute;
+  top:30%;
+  left:50%;
+  width:90%;
+  text-align: center;
+}
+
+.description-text{
+  margin: 1vh 0px 0px 0px;
+  font-size: 2.5vh ;
+  font-weight: 400;
+  text-align: center;
+  transition: all .4s cubic-bezier(0.215, 0.61, 0.355, 1) 1.s;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.fadeIn {
+  animation: fadeInAnimation 1s ease-out;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+
+  }
+  100% {
+    opacity: 1;
+  }
+}

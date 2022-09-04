@@ -1,38 +1,62 @@
+html{
+  scroll-behavior: smooth
+}
+
+
+body{
+  margin:0px;
+  background-color: #131313;
+  overflow-x:clip;
+  /* background: linear-gradient(60deg, #2705e6de 0%, #4d0ca1 51%); */
+  color:white;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+}
+
+[data-theme='white']{
+  background-color: white;
+  color:#131313;
+  /* z-index: -2000; */
+}
+
+[data-theme='dark']{
+  background-color: #131313;
+  color: white;
+
+  /* z-index: -2000; */
+
+}
+
+
 .App {
+  text-align: left;
+}
+
+.arrow-container{
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count:infinite;
+  animation-timing-function:ease-in-out;
+  margin: 10vh 0px; 
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.down{
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+} 
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes bounce{
+  0%, 100%{
+    transform: translateY(0);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  50%{
+    transform: translateY(-10px);
   }
-  to {
-    transform: rotate(360deg);
-  }
+
 }

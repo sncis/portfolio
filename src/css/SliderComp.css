@@ -1,0 +1,41 @@
+.outer-container{
+  max-width:600px;
+  margin:auto;
+  width:90%;
+  padding:200px 0px;
+  position:relative;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.image-container-neu{
+  /* background-image: url('https://images.unsplash.com/photo-1570528812862-9984124e7e22?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ'); */
+  background-color: red;
+  padding-bottom: 100px;
+  height:5vh;
+  position:relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.section-title{
+  margin:0;
+  font-size:64px;
+  width:100;
+  text-align: center;
+  position:absolute;
+  top:50%;
+  left:-30%;
+  transform: translateY(-50%);
+  z-index:1;
+  white-space: nowrap;
+
+}
+
+.section-title.on-dark{
+  color:white
+}
+.section-title span{
+  position:relative;
+  display: block;
+} 
+

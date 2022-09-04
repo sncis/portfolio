@@ -1,0 +1,42 @@
+.nav-container{
+  position:relative;
+  margin:0px;
+  top:0px;
+  left:0px;
+  z-index: 10;
+}
+
+.nav-to{
+  position:fixed;
+  color:white;
+  /* background-color: red; */
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.nav-to.home{
+  top: 10px;
+  right:50%;
+  /* transform: translateX(-50%); */
+}
+
+.nav-to.cv{
+  top:50%;
+  right:90vw;
+  width:max-content;
+  transform: rotate(-90deg);
+
+}
+
+.nav-to.about{
+  top:50%;
+  right:0px;
+  transform: rotate(-90deg);
+}
+
+.nav-to.projects{
+  bottom:10px;
+  right:50%;
+  transform: translateX(50%);
+}
+

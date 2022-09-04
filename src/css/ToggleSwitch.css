@@ -1,0 +1,58 @@
+.toggle-menu{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:200px;
+}
+
+.toggle-text{
+  font-size:3em;
+  font-weight: 600;
+  color:grey
+}
+
+.active {
+  /* color:black */
+
+}
+.toggle-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toggle-label{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 190px;
+  height: 70px;
+  background: lightgrey;
+  border-radius: 100px;
+  position: relative;
+  transition: background-color .2s;
+  margin: 0px .6rem;
+}
+
+.toggle-label .toggle-span{
+  content:'';
+  position: absolute;
+  top:2px;
+  left:2px;
+  width: 100px;
+  height: 66px;
+  border-radius:45px;
+  transition:  0.3s ;
+  background: blue;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.toggle-checkbox:checked + .toggle-span{
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+.toggle-label:active .toggle-span{
+  width:70px
+}

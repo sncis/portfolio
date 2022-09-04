@@ -1,0 +1,45 @@
+.front-page-container{
+  position:relative;
+  height: 100vh;
+  width: 100vw;
+  margin-bottom: 10vh;
+}
+
+.front-image-container{
+  position:absolute;
+  /* transform-style: preserve-3d; */
+  perspective: 2px;
+  /* top: 70vh;
+  left:0px; */
+  height:50vh;
+  width:30vw;
+  /* overflow-y:auto; */
+  overflow:hidden;
+  /* background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+
+.front-image-container1{
+  position:absolute;
+  /* transform-style: preserve-3d; */
+  perspective: 2px;
+  /* top: 70vh;*/
+  left:50vw; 
+  height:50vh;
+  width:30vw;
+  overflow:hidden;
+  /* overflow-x:hidden; */
+  /* background-attachment: fixed; */
+  
+}
+
+.front-image-container img{
+  /* position:absolute; */
+  transform: translateZ(-1px) scale(1.5);
+  /* background-size: 100%; */
+  z-index: -1;
+  object-fit: cover;
+
+}

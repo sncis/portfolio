@@ -1,0 +1,232 @@
+.title-container{
+  /* height: 100vh; */
+  position: relative;
+  /* margin-bottom: 10vh; */
+  overflow:auto;
+}
+
+.page-title{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  font-size: 4.3em;
+  letter-spacing: -4px;
+  font-weight: 700;
+  /* color: #7e2ea0; */
+  text-align: center;
+}
+
+.close-detail-view{
+  text-decoration: none;
+  color:black;
+  margin: 5vh 2vw;
+
+}
+
+.fadeInAnimation{
+  animation-name: fadeInBottom ;
+  animation-duration: 1s;
+
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+    /* transform: translate3d(0px, 0px, 0px); */
+  }
+  to { 
+    opacity: 1 
+  }
+}
+
+/* .project-page-div{
+  margin:auto;
+  max-width:900px;
+
+} */
+
+.project-section{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  margin-top: 20vh;
+}
+
+.timeline-container{
+  position:relative;
+}
+
+.timeline{
+  width:1px; 
+  top:-150px;
+  bottom:0px;
+  background-color:white;
+  left:50%;
+  position: absolute;
+  display:block;
+  z-index:-200;
+}
+
+
+.show-modal > *{
+  animation-name: hide-project;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes hide-project{
+  0%{
+    visibility:visible;
+    opacity:1  
+  }
+    50%{
+      width:50%;
+    }
+  100%{
+    top:0px;
+    left:0px;
+    opacity:0;
+    visibility: hidden;
+    overflow:hidden
+  }
+
+}
+
+
+/* *************** project-container css ******************** */
+.project-wrapper{
+  position: relative;
+  width:100vw;
+}
+
+
+.project-wrapper:nth-child(even){
+  /* border: 2px solid green; */
+  align-self: flex-start;
+  display:flex;
+  flex-direction: row;
+  /* background-color: white; */
+}
+
+.project-wrapper:nth-child(odd){
+  /* border: 2px solid red; */
+  align-self: flex-end;
+  display:flex;
+  flex-direction: row-reverse;
+}
+
+
+.project-container-even,  .project-container-odd{
+  margin-top: 10%;
+  width:40vw;
+  height:50vh;
+  margin-bottom: 40vh;
+  visibility: hidden;
+  opacity:0;
+  transition: all 1s ease-in-out;
+
+}
+
+
+.project-container-even.is-visible, .project-container-odd.is-visible {
+  visibility: visible;
+  transform: translateY(-30%);
+  opacity:1;
+}
+
+.image-container{
+  overflow: hidden;
+  width:80%;
+  position: relative;
+  margin:auto;
+}
+
+.image-container img{
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+
+.project-description{
+  position:absolute;
+  margin-left:30px;
+  background-color: black;
+  top:140%;
+  width:35vw;
+  font-weight: 300;
+  
+}
+
+
+.project-title{
+  position: relative;
+  font-size: 1.5;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+
+.project-text{
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.outer-decription-container{
+  display: flex;
+  /* border:1px solid red; */
+  width:inherit;
+  height: inherit;
+}
+
+
+
+.project-container-odd.is-visible,.project-container-even.is-visible > .outer-decription-container  > .project-description{
+  text-align:left;
+  padding-right: 25px;
+}
+
+.project-container-even.is-visible > .outer-decription-container  > .project-description{
+  right:40vw; 
+  /* text-align:left; */
+  padding-left: 20px;
+  /* border: 1px solid yellow; */
+}
+
+.project-container-odd.is-visible > .outer-decription-container  > .project-description{
+  left:40vw; 
+  /* text-align:left; */
+  padding-left: 20px;
+  /* border: 1px solid red; */
+}
+
+/* .project-containe.is-visible:nth-child(even)> .outer-decription-container  > .project-description{
+  content:'\00a0';
+  background-color: yellow;
+  height: 100px;
+  width: 100px;
+
+} */
+
+.margin{
+  position: absolute;
+  width: 10%;
+  /* height:120%; */
+  z-index:-200;
+  top: 25vh;
+  background-color: black;
+}
+
+.project-container-even > .outer-decription-container > .margin{
+  left: -50%;
+  transform: translateX(50%);
+
+}
+.project-container-odd > .outer-decription-container> .margin{
+ right: 50vw;
+ transform: translateX(50%)
+}
+
+
